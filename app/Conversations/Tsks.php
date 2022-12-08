@@ -34,7 +34,7 @@ class Tsks extends Conversation
     }
 
     public function askKey() {
-        return $this->ask('Введите ключ пользователя. В боте он хранится в зашифрованном виде.', function (Answer $answer) {
+        return $this->ask('Введите токен пользователя. В боте он хранится в зашифрованном виде.', function (Answer $answer) {
             $this->key = $answer->getText();
             $this->checkCreds();
         });
